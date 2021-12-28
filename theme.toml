@@ -1,15 +1,15 @@
 name = "werc"
 license = "CC0-1.0"
-licenselink = "https://github.com/dennisleexyz/hugo-werc/blob/master/LICENSE"
+licenselink = "https://github.com/ctis-me/hugo-werc"
 description = "A theme ported from werc"
-homepage = "https://github.com/dennisleexyz/hugo-werc"
+homepage = "https://github.com/ctis-me/hugo-werc"
 tags = ["minimal", "blog", "personal", "clean", "simple", "starter", "minimalist"]
 features = ["blog"]
 min_version = "0.18"
 
 [author]
-  name = "Dennis Lee"
-  homepage = "https://dennislee.xyz/"
+  name = "Dennis Lee, Charlton Trezevant"
+  homepage = "https://github.com/ctis-me/hugo-werc"
 
 [original]
   name = "werc"

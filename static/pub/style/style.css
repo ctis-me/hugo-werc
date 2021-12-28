@@ -55,20 +55,24 @@ tr:nth-child(odd) { background-color: rgba(128,128,128,0.1)  }
 
 body { background-color: white;}
 
-pre, #header, #side-bar, #footer{
+pre, header, side-bar, footer{
 	font-family: 'Go'; 
 	font-weight: normal; 
 	font-style: normal;
 }
 
-.midHeader { background-color: #e7fbfd; border-color: #777}
-.superHeader, .superHeader a {color: #777!important; background-color: white}
+.midHeader { background-color: #e7fbfd; border-color: #777;}
 
-#side-bar { background-color: white;}
+.superHeader, .superHeader a, header nav {color: #777!important; background-color: white}
 
-#side-bar a {border-left: #777 solid 0.2em; color: black;}
+div.right {margin-left: auto;}
+div.right > a {display:  inline-block;}
 
-#side-bar a:hover {
+side-bar { background-color: white;}
+
+.sidebarLink {border-left: #777 solid 0.2em; color: black;}
+
+.sidebarLink:hover {
   color: black!important;
   border-left: black solid 0.2em;
   background-color: #e7fbfd;
@@ -76,8 +80,12 @@ pre, #header, #side-bar, #footer{
 
 .thisPage, .thispage a {color:  black!important;border-left: black solid 0.2em!important;}
 
-#footer, #footer a {color: black;background-color: #e7fbfd;}
+footer, footer a {color: black;background-color: #e7fbfd;}
 
-#main-copy h1 {color: black;border-bottom: 2px solid #777;}
-#main-copy h2 {color: black;border-bottom: 1px solid #777;}
+body > footer {position: sticky; left: 0; bottom: 0; width: 100%;}
+
+article h1 {color: black;border-bottom: 2px solid #777;}
+article h2 {color: black;border-bottom: 1px solid #777;}
+
+.indexListItem {padding-left:  10px; margin-left:  10px;}
 

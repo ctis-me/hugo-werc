@@ -1,9 +1,9 @@
 {{ partial "headers.html" . }}
 <header>
-    <nav>
+    <nav class="superHeader">
         {{ partial "top_bar.html" . }}
     </nav>
-    <h1><a href="/">{{ .Site.Title }}</a></h1>
+    <h1 class="midHeader"><a href="/">{{ .Site.Title }}</a></h1>
 </header>
 
     <nav id="side-bar">
@@ -12,7 +12,7 @@
         <ul class="dir-list">
             {{ range .Site.Home.Pages }}
             <li>
-                <a href="{{ .RelPermalink }}">› {{ .Title | markdownify }}/</a>
+                <a class="sidebarLink" href="{{ .RelPermalink }}">› {{ .Title | markdownify }}/</a>
             </li>
             {{ end }}
         </ul>
@@ -21,3 +21,4 @@
     </nav>
 
 <article>
+

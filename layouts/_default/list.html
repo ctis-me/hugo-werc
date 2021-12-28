@@ -1,7 +1,10 @@
 {{ partial "default_master" . }}
 
+    <h1>{{ .Title }} Index</h1>
+    <p> </p>
+
     {{ range .Pages }}
-    <li>
+    <li class="indexListItem">
         <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
     </li>
     {{ end }}

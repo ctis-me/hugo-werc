@@ -2,19 +2,19 @@
 
 <div id="post-head">
 
-  <div class="post-titlebox">
+  <div id="post-titlebox">
     <h1 id="post-title">{{ .Title }}</h1>
     <span id="post-description"><p>{{ .Param "description" | safeHTML }}</p></span>
   </div>
 
-  <div class="post-metabox">
+  <div id="post-metabox">
       <div id="post-pubdate">
-        <span class="post-pubdate-label">Published: </span><span class="post-pubdate-date">{{ .Param "date" | time.Format ":date_medium"  }}</span>
+        <span id="post-pubdate-label"><a href="/blog/">Published:</a> </span><span class="post-pubdate-date">{{ .Param "date" | time.Format ":date_medium"  }}</span>
       </div>
 
       {{ if isset .Params "category" }}
-      <div class="post-categories">
-        <span class="post-categories-label"><a href="/category/">Category:</a> </span>
+      <div id="post-categories">
+        <span id="post-categories-label"><a href="/category/">Category:</a> </span>
         {{ with .Params.category }}
           {{ range $i, $tag := (. | sort) }}
             <span class="post-categories-category"><a href='/tag/{{ . | urlize }}'>{{ . | title }}</a>{{ if ne $i (sub (len $.Params.category) 1) }}, {{ else }}{{ end }}</span>
@@ -24,8 +24,8 @@
       {{end}}
 
       {{ if isset .Params "tag" }}
-      <div class="post-tags">
-        <span class="post-tags-label"><a href="/tag/">Tags:</a> </span>
+      <div id="post-tags">
+        <span id="post-tags-label"><a href="/tag/">Tags:</a> </span>
         {{ with .Params.tag }}
           {{ range $i, $tag := (. | sort) }}
             <span class="post-tags-tag"><a href='/tag/{{ . | urlize }}'>{{ . }}</a>{{ if ne $i (sub (len $.Params.tag) 1) }}, {{ else }}{{ end }}</span>

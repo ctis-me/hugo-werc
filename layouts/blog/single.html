@@ -17,7 +17,7 @@
         <span id="post-categories-label"><a href="/category/">Category:</a> </span>
         {{ with .Params.category }}
           {{ range $i, $tag := (. | sort) }}
-            <span class="post-categories-category"><a href='/tag/{{ . | urlize }}'>{{ . | title }}</a>{{ if ne $i (sub (len $.Params.category) 1) }}, {{ else }}{{ end }}</span>
+            <span class="post-categories-category"><a href='/category/{{ . | urlize }}'>{{ . | title }}</a>{{ if ne $i (sub (len $.Params.category) 1) }}, {{ else }}{{ end }}</span>
           {{ end }}
         {{end}}
       </div>

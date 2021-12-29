@@ -78,7 +78,7 @@ side-bar { background-color: white;}
   background-color: #e7fbfd;
 }
 
-.thisPage, .thispage a {color:  black!important;border-left: black solid 0.2em!important;}
+.thisPage, .thispage a {color:  black!important;border-left: black solid 0.2em!important; font-style: italic!important;}
 
 footer, footer a {color: black;background-color: #e7fbfd;}
 

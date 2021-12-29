@@ -1,0 +1,9 @@
+{{ if .IsNamedParams }}
+  <div class="cdnvid-container">
+    <video controls class="{{ if .Get "class" }}{{ .Get "class" }}{{ else }}cdnvid{{ end }}" src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/{{ .Get "id" }}"></video>
+  </div>
+{{ else }}
+  <div class="cdnvid-container">
+    <video controls class="{{ if len .Params | eq 2 }}{{ .Get 1 }}{{ else }}cdnvid{{ end }}" src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/{{ .Get 0 }}"></video>
+  </div>
+{{ end }}

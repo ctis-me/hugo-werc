@@ -10,7 +10,7 @@
         <div>
 
         <ul class="dir-list">
-            {{ range .Site.Home.Pages }}
+            {{ range sort .Site.Home.Pages ".Title" }}
             <li>
                 <a class="sidebarLink" href="{{ .RelPermalink }}">› {{ .Title | markdownify }}/</a>
             </li>

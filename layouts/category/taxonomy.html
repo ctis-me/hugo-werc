@@ -1,0 +1,12 @@
+{{ partial "default_master" . }}
+
+    <h1>Category: {{ title .Title }}</h1>
+    <p> </p>
+
+    {{ range .Pages }}
+    <li class="indexListItem">
+        <a href="{{ .RelPermalink }}">{{ title .Title | markdownify }}</a>
+    </li>
+    {{ end }}
+
+{{ partial "footer" . }}

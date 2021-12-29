@@ -1,0 +1,13 @@
+{{ partial "default_master" . }}
+
+    <h1>{{ .Title }} Index</h1>
+    <p> </p>
+
+    {{ range .Data.Terms.Alphabetical }}
+     <li class="indexListItem tag-list-entry">
+        <a class="tag-list-link" href="{{ .Page.Permalink }}">{{ title .Page.Title | markdownify }}</a> <span class="tag-list-count">({{ .Count }})</span>
+    </li>
+    {{ end }}
+
+
+{{ partial "footer" . }}

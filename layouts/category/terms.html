@@ -3,10 +3,15 @@
     <h1>{{ .Title }} Index</h1>
     <p> </p>
 
-    {{ range .Pages }}
-    <li class="indexListItem">
-        <a href="{{ .RelPermalink }}">{{ title .Title | markdownify }}</a>
-    </li>
+    {{ $title := urlize .Title }}
+    {{ with .Site.Taxonomies.category }}
+       {{ range $name, $taxonomy := . }}
+        {{ $term := urlize $name }}
+        <li class="indexListItem category-list-entry">
+            <a class="category-list-link" href="{{ .Page.Permalink }}">{{ title $term | markdownify }}</a>
+            <span class="category-list-count">({{ $taxonomy.Count }})</span>
+        </li>
+        {{ end }}
     {{ end }}
 
 {{ partial "footer" . }}

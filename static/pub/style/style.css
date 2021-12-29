@@ -96,7 +96,7 @@ img {border: 1.5px solid #777; max-width: 80%; height: auto;}
 #post-metabox {border: 1px solid #777; padding: 5px; max-width: 25%}
 
 #cattags {margin-top:  5px;}
-.tag-list-count { font-size: 75%;}
+.tag-list-count, .category-list-count { font-size: 75%;}
 
 .gallery-image-container {  display: flex; flex-direction: column; margin: 10px;}
 .gallery-description {margin-top:  5px; font-style: italic; font-size: 90%;}

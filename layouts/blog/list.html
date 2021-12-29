@@ -1,9 +1,12 @@
 {{ partial "default_master" . }}
 
-    <h1>{{ .Title }}</h1>
-    <p> </p>
+    <h1>{{ title .Title }}</h1>
 
-    <a href="/category">categories</a>, <a href="/tag">tags</a>
+    <div id="cattags">
+      <span><a href="/category">categories</a>, <a href="/tag">tags</a></span>
+    </div>
+
+{{ .Content }}
 
     <section>
     {{ $prev := 3000}}

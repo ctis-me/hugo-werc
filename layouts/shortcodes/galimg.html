@@ -1,9 +1,11 @@
 {{ if .IsNamedParams }}
   <div class="cdnimg-container gallery-image-container">
-    <img class="{{ if .Get "class" }}{{ .Get "class" }}{{ else }}cdnimg{{ end }} gallery-image" src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/img/gallery/{{ .Get "id" }}" />
+    <img class="gallery-image" {{ if .Get "desc" }}alt="{{ .Get "desc" }}"{{ end }} src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/img/gallery/{{ .Get "path" }}" />
+    <span class="gallery-description">{{ if .Get "desc" }}{{ .Get "desc" }}{{ end }}</span>
   </div>
 {{ else }}
-  <div class="cdnimg-container">
-    <img class="{{ if len .Params | eq 2 }}{{ .Get 1 }}{{ else }}cdnimg{{ end }} gallery-image" src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/img/gallery/{{ .Get 0 }}" />
+  <div class="cdnimg-container gallery-image-container">
+    <img class="gallery-image" {{ if len .Params | eq 2 }}alt="{{ .Get 1 }}"{{ end }} src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/img/gallery/{{ .Get 0 }}" />
+    <span class="gallery-description">{{ if len .Params | eq 2 }}{{ .Get 1 }}{{ end }}</span>
   </div>
 {{ end }}

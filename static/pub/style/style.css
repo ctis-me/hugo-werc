@@ -82,7 +82,7 @@ side-bar { background-color: white;}
 
 footer, footer a {color: black;background-color: #e7fbfd;}
 
-body > footer {position: sticky; left: 0; bottom: 0; width: 100%;}
+body > footer {position: fixed; left: 0; bottom: 0; width: 100%;}
 
 article h1 {color: black;border-bottom: 2px solid #777;}
 article h2 {color: black;border-bottom: 1px solid #777;}

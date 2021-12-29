@@ -3,13 +3,19 @@
 
 <div id="goog-fixurl"><div id="goog-wm"><div class="content"><h3 class="other-things"><b>Other things to try:</b></h3><ul><li class="search-goog">Search <b><i>{{ .Site.BaseURL }}</b>:
 
-<form action="https://duckduckgo.com/" method="GET" id="cse-search-box" style="display: inline">
+<form action="https://duckduckgo.com/" method="GET" target="_new" id="cse-search-box-404" style="display: inline">
   <div style="display: inline">
-    <input type="text" name="q" placeholder="Search..." size="16" />
+    <input id="cse-search-box-404-query" type="text" name="q" placeholder="Search..." size="16" />
     <input type="submit" value="Go" />
   </div>
 </form>
 
+<script>
+  document.getElementById('cse-search-box-404').onsubmit = function() {
+    var txt = document.getElementById('cse-search-box-404-query');
+    txt.value = "site:blog.ctis.me " + txt.value;
+  };
+</script>
 </div>
 
 <h4>Or take a look at the <a href="/sitemap.xml">sitemap</a>.</h4>

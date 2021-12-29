@@ -4,10 +4,17 @@
 <div><a href="https://github.com/ctis-me/hugo-werc">Descended from werc</a> | <a href="https://creativecommons.org/licenses/by-sa/4.0/">© {{ now.Format "2006"}} Charlton Trezevant, CC-BY-SA 4.0</a></div>
 
 <div class="right">
-<form action="https://duckduckgo.com/" method="GET" id="cse-search-box" style="display: inline">
+<form action="https://duckduckgo.com/" method="GET" id="cse-search-box-footer" style="display: inline">
   <div style="display: inline">
-    <input type="text" name="q" placeholder="Search..." size="16" />
+    <input type="text" id="cse-search-box-footer-query" name="q" placeholder="Search..." size="16" />
     <input type="submit" value="Go" />
   </div>
 </form>
+
+<script>
+  document.getElementById('cse-search-box-footer').onsubmit = function() {
+    var txt = document.getElementById('cse-search-box-footer-query');
+    txt.value = "site:blog.ctis.me " + txt.value;
+  };
+</script>
 </body></html>

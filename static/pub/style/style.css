@@ -90,3 +90,9 @@ article h2 {color: black;border-bottom: 1px solid #777;}
 .indexListItem {padding-left:  10px; margin-left:  10px;}
 
 img {border: 1.5px solid #777; max-width: 80%; height: auto;}
+
+#post-pubdate-label, #post-categories-label, #post-tags-label { font-color:  black; font-weight: bold; text-decoration: none; }
+
+#post-description { font-weight: italic; }
+
+#post-metabox {border: 1px solid #777; padding: 5px; max-width: 25%}

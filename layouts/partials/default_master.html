@@ -27,8 +27,12 @@
         sb = document.querySelector("#side-bar");
         link = sb.querySelectorAll('a[href="'+window.location.pathname+'"]');
 
-        link[0].innerText = link[0].textContent.replace('›', '»');
-        link[0].classList.add("thisPage");
+        try {
+          link[0].innerText = link[0].textContent.replace('›', '»');
+          link[0].classList.add("thisPage");
+        } catch (e) {
+            // small error. who cares?
+        }
     </script>
 
 <article>

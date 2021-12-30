@@ -12,7 +12,7 @@ footer { display: flex; justify-content: space-between; }
 
 /* cut here to leave vanity behind */
 
-body { margin:0; padding: 0; font-size: 84%; font-family: Helvetica, Verdana, Arial, 'Liberation Sans', FreeSans, sans-serif; }
+body { margin:0; padding: 0; font-size: 90%; font-family: Helvetica, Verdana, Arial, 'Liberation Sans', FreeSans, sans-serif; }
 a { text-decoration: none; color: }
 a:hover { text-decoration: underline }
 
@@ -87,16 +87,20 @@ body > footer {position: fixed; left: 0; bottom: 0; width: 100%;}
 article h1 {color: black;border-bottom: 2px solid #777;}
 article h2 {color: black;border-bottom: 1px solid #777;}
 
+.category-list-link, .tag-list-link, .indexListItem > a {font-size: 110%}
 .indexListItem {padding-left:  10px; margin-left:  10px;}
+.tag-list-count, .category-list-count { font-size: 85%;}
 
-img {border: 1.5px solid #777; max-width: 80%; height: auto;}
+img, video {border: 1.5px solid #777; max-width: 80%; height: auto;}
+
+#post-metabox {display: flex; flex-direction:  column; border: 1px solid #777; padding: 5px; max-width: max-content;}
+
+#post-categories, #post-tags { max-width: 100%; }
 
 #post-pubdate-label a, #post-categories-label a, #post-tags-label a { padding-right:  2px; color:  black!important; font-weight: bold; text-decoration: none; }
 #post-description > p { font-size:  115%; font-style: italic; }
-#post-metabox {border: 1px solid #777; padding: 5px; max-width: 25%}
 
 #cattags {margin-top:  5px;}
-.tag-list-count, .category-list-count { font-size: 75%;}
 
-.gallery-image-container {  display: flex; flex-direction: column; margin: 10px;}
+.gallery-image-container, .cdnimg-container, .cdnvid-container {  display: flex; flex-direction: column; margin: 10px;}
 .gallery-description {margin-top:  5px; font-style: italic; font-size: 90%;}

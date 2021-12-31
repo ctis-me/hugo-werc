@@ -86,6 +86,8 @@ body > footer {left: 0; bottom: 0; width: 100%;}
 
 article h1 {color: black;border-bottom: 2px solid #777;}
 article h2 {color: black;border-bottom: 1px solid #777;}
+article h3 {color: black;border-bottom: 0.5px solid #777;}
+article h4 {color: black;border: none}
 
 .category-list-link, .tag-list-link, .indexListItem > a {font-size: 110%}
 .indexListItem {padding-left:  10px; margin-left:  10px;}

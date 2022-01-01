@@ -84,6 +84,8 @@ footer, footer a {color: black;background-color: #e7fbfd;}
 
 body > footer {left: 0; bottom: 0; width: 100%;}
 
+article { flex-basis:  55%; max-width: 60%; }
+
 article h1 {color: black;border-bottom: 2px solid #777;}
 article h2 {color: black;border-bottom: 1px solid #777;}
 article h3 {color: black;border-bottom: 0.5px solid #777;}
@@ -109,3 +111,12 @@ img, video {border: 1.5px solid #777; max-width: 80%; height: auto;}
 
 pre, code {max-width:  100%; scrollbar-width: none; overflow-x: scroll; overflow-y: scroll;}
 pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
+
+@media only screen and (max-width: 600px) {
+  body { font-size: 100% }
+  article { flex-basis:  100%; max-width: 96%; }
+  img { max-width: 100%; }
+  footer > .left { max-width:  40%; font-size: 80%}
+  footer > .right { padding:  0;}
+  #cse-search-box-footer-query { width: 60%; }
+}

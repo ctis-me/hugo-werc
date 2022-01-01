@@ -80,9 +80,9 @@ side-bar { background-color: white;}
 
 .thisPage, .thispage a {color:  black!important;border-left: black solid 0.2em!important; font-style: italic!important;}
 
-footer, footer a {color: black;background-color: #e7fbfd;}
-
 body > footer {left: 0; bottom: 0; width: 100%;}
+footer, footer a {color: black;background-color: #e7fbfd;}
+footer > .right { padding:  0;}
 
 article { flex-basis:  55%; max-width: 60%; }
 
@@ -117,6 +117,5 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
   article { flex-basis:  100%; max-width: 96%; }
   img { max-width: 100%; }
   footer > .left { max-width:  40%; font-size: 80%}
-  footer > .right { padding:  0;}
   #cse-search-box-footer-query { width: 60%; }
 }

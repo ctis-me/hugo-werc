@@ -13,14 +13,22 @@
     <link rel="shortcut icon" href="https://cdn.ctis.me/file/ctisme-cdn/www.ctis.me/resources/images/favicon.png" type="image/vnd.microsoft.icon">
 
     <link rel="canonical" href="{{ .Permalink }}" />
-    <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}" />
 
-    <meta name="author" content="Charlton Trezevant">
+    <meta property="og:title" content="{{ if .Params.title }}{{ .Params.title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}" />
+
+    <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+    <meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
+    <meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
 
     <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="article" />
+
     <meta name="twitter:title" content="{{ if .Params.title }}{{ .Params.title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta name="twitter:image" content="{{ .Site.Params.TwitterCardImg }}">
-    <meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
+    <meta property="og:image" content="{{ .Site.Params.TwitterCardImg }}" />
+
+    <meta name="author" content="Charlton Trezevant">
     <meta name="twitter:site" content="{{ .Site.Params.TwitterUsername }}">
     <meta name="twitter:creator" content="{{ .Site.Params.TwitterUsername }}">
 </head>

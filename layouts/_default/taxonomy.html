@@ -3,10 +3,25 @@
     <h1>Posts Tagged "{{ title .Title }}"</h1>
     <p> </p>
 
-    {{ range .Pages }}
-    <li class="indexListItem">
-        <a href="{{ .RelPermalink }}">{{ title .Title | markdownify }}</a>
-    </li>
-    {{ end }}
+    <section>
+    {{ $prev := 3000}}
+    {{range .Pages}}
+      {{if .Date}}
+      {{if gt $prev (.Date.Format "2006")}}
+      {{ if ne $prev 3000}}
+        </table>
+      {{ end }}
+      <h2>{{ .Date.Format "2006" }}</h2>
+      <table class="posts-index">
+      {{end}}
+      <tr>
+        <td>{{.Date.Format "02 Jan"}}</td>
+        <td><a href="{{.Permalink}}">{{ title .Title | markdownify }}</a></td>
+      </tr>
+      {{ $prev = .Date.Format "2006"}}
+      {{end}}
+    {{end}}
+  </table>
+  </section>
 
 {{ partial "footer" . }}

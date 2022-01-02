@@ -18,7 +18,7 @@
     <meta name="author" content="Charlton Trezevant">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{ if .Params.title }}{{ .Params.title }}{{ else }}{{ .Site.Title }}{{ end }}">
+    <meta name="twitter:title" content="{{ if .Params.title }}{{ .Params.title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta name="twitter:image" content="{{ .Site.Params.TwitterCardImg }}">
     <meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
     <meta name="twitter:site" content="{{ .Site.Params.TwitterUsername }}">

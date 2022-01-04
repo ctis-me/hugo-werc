@@ -3,7 +3,7 @@
 <div id="post-head">
 
   <div id="post-titlebox">
-    <h1 id="post-title">{{ .Title }}</h1>
+    <h1 id="post-title">{{ title .Title | markdownify }}</h1>
     <span id="post-description"><p>{{ .Param "description" | safeHTML }}</p></span>
   </div>
 

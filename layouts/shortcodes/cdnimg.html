@@ -1,9 +1,9 @@
 {{ if .IsNamedParams }}
   <div class="cdnimg-container">
-    <img class="{{ if .Get "class" }}{{ .Get "class" }}{{ else }}cdnimg{{ end }}" src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/img/{{ .Get "id" }}" />
+    <img class="{{ if .Get "class" }}{{ .Get "class" }}{{ else }}cdnimg{{ end }}" src="https://cdn.ctis.me/file/ctisme-cdn/{{ .Get "id" }}" />
   </div>
 {{ else }}
   <div class="cdnimg-container">
-    <img class="{{ if len .Params | eq 2 }}{{ .Get 1 }}{{ else }}cdnimg{{ end }}" src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/img/{{ .Get 0 }}" />
+    <img class="{{ if len .Params | eq 2 }}{{ .Get 1 }}{{ else }}cdnimg{{ end }}" src="https://cdn.ctis.me/file/ctisme-cdn/{{ .Get 0 }}" />
   </div>
 {{ end }}

@@ -1,9 +1,9 @@
 {{ if .IsNamedParams }}
   <div class="cdnaudio-container">
-    <audio controls class="{{ if .Get "class" }}{{ .Get "class" }}{{ else }}cdnaudio{{ end }}" src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/audio/{{ .Get "id" }}"></audio>
+    <audio controls class="{{ if .Get "class" }}{{ .Get "class" }}{{ else }}cdnaudio{{ end }}" src="https://cdn.ctis.me/file/ctisme-cdn/{{ .Get "id" }}"></audio>
   </div>
 {{ else }}
   <div class="cdnaudio-container">
-    <audio controls class="{{ if len .Params | eq 2 }}{{ .Get 1 }}{{ else }}cdnaudio{{ end }}" src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/audio/{{ .Get 0 }}"></audio>
+    <audio controls class="{{ if len .Params | eq 2 }}{{ .Get 1 }}{{ else }}cdnaudio{{ end }}" src="https://cdn.ctis.me/file/ctisme-cdn/{{ .Get 0 }}"></audio>
   </div>
 {{ end }}

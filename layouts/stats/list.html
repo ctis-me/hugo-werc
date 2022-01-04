@@ -1,0 +1,42 @@
+{{ partial "default_master" . }}
+
+  {{ $statpages := ($.Site.GetPage "section" .Section).Pages.ByPublishDate.Reverse }}
+
+  {{ range first 1 $statpages }}
+    <div id="post-head">
+
+  <div id="post-titlebox">
+    <h1 id="post-title">Stats for {{ .Param "date" | time.Format "January 2006"  }}</h1>
+    <span id="post-description"><p>{{ .Param "description" | safeHTML }}</p></span>
+  </div>
+</div>
+
+    {{ .Content }}
+  {{ end }}
+
+  <br />
+  <hr class="stats-table-separator" />
+  <h3 class="archive-header">Monthly Archive</h3>
+
+    <section id="stats-table-archive">
+    {{ $prev := 3000}}
+    {{range .Pages}}
+      {{if .Date}}
+      {{if gt $prev (.Date.Format "2006")}}
+      {{ if ne $prev 3000}}
+        </table>
+      {{ end }}
+      <h2 class="stats-table-year">{{ .Date.Format "2006" }}</h2>
+      <table class="posts-index">
+      {{end}}
+      <tr>
+        <td>{{.Date.Format "Jan"}}</td>
+        <td><a href="{{.Permalink}}">Stats for {{ .Param "date" | time.Format "January 2006"  }}</a></td>
+      </tr>
+      {{ $prev = .Date.Format "2006"}}
+      {{end}}
+    {{end}}
+  </table>
+  </section>
+
+{{ partial "footer" . }}

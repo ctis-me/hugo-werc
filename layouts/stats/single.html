@@ -1,0 +1,38 @@
+{{ partial "default_master" . }}
+
+<div id="post-head">
+
+  <div id="post-titlebox">
+    <h1 id="post-title">Stats for {{ .Param "date" | time.Format "January 2006"  }}</h1>
+    <span id="post-description"><p>{{ .Param "description" | safeHTML }}</p></span>
+  </div>
+
+  <div id="post-metabox">
+      {{ if isset .Params "category" }}
+      <div id="post-categories">
+        <span id="post-categories-label"><a href="/category/">Category:</a> </span>
+        {{ with .Params.category }}
+          {{ range $i, $tag := (. | sort) }}
+            <span class="post-categories-category"><a href='/category/{{ . | urlize }}'>{{ . | title }}</a>{{ if ne $i (sub (len $.Params.category) 1) }}, {{ else }}{{ end }}</span>
+          {{ end }}
+        {{end}}
+      </div>
+      {{end}}
+
+      {{ if isset .Params "tag" }}
+      <div id="post-tags">
+        <span id="post-tags-label"><a href="/tag/">Tags:</a> </span>
+        {{ with .Params.tag }}
+          {{ range $i, $tag := (. | sort) }}
+            <span class="post-tags-tag"><a href='/tag/{{ . | urlize }}'>{{ . }}</a>{{ if ne $i (sub (len $.Params.tag) 1) }}, {{ else }}{{ end }}</span>
+          {{ end }}
+        {{end}}
+      </div>
+      {{end}}
+
+      <div id="post-backbutton"><span id="post-backbutton-label">Back to: </span><a href="/stats/">stats</a></div>
+  </div>
+</div>
+
+{{ .Content }}
+{{ partial "footer" . }}

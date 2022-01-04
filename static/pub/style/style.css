@@ -101,7 +101,7 @@ img, video {border: 1.5px solid #777; max-width: 80%; height: auto;}
 
 #post-categories, #post-tags { max-width: 100%; }
 
-#post-pubdate-label a, #post-categories-label a, #post-tags-label a { padding-right:  2px; color:  black!important; font-weight: bold; text-decoration: none; }
+#post-pubdate-label a, #post-categories-label a, #post-tags-label a, #post-backbutton-label { padding-right:  2px; color:  black!important; font-weight: bold; text-decoration: none; }
 #post-description > p { font-size:  115%; font-style: italic; }
 
 #cattags {margin-top:  5px;}
@@ -111,6 +111,10 @@ img, video {border: 1.5px solid #777; max-width: 80%; height: auto;}
 
 pre, code {max-width:  100%; scrollbar-width: none; overflow-x: scroll; overflow-y: scroll;}
 pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
+
+.stats-table-separator { border-top: dotted 1px; margin-top: 25px;}
+#stats-table-archive h2:first-child { margin-top:  25px; }
+.archive-header {margin:  0; border: none;}
 
 @media only screen and (max-width: 600px) {
   body { font-size: 100% }

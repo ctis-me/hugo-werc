@@ -3,7 +3,7 @@
 <div id="post-head">
 
   <div id="post-titlebox">
-    <h1 id="post-title">Stats for {{ .Param "date" | time.Format "January 2006"  }}</h1>
+    <h1 id="post-title">Status Update - {{ .Param "date" | time.Format "January 2006"  }}</h1>
     <span id="post-description"><p>{{ .Param "description" | safeHTML }}</p></span>
   </div>
 
@@ -30,7 +30,7 @@
       </div>
       {{end}}
 
-      <div id="post-backbutton"><span id="post-backbutton-label">Back to: </span><a href="/stats/">stats</a></div>
+      <div id="post-backbutton"><span id="post-backbutton-label">Back to: </span><a href="/status/">status</a></div>
   </div>
 </div>
 

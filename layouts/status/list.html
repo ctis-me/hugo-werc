@@ -5,11 +5,11 @@
   {{ range first 1 $statpages }}
     <div id="post-head">
 
-  <div id="post-titlebox">
-    <h1 id="post-title">Stats for {{ .Param "date" | time.Format "January 2006"  }}</h1>
-    <span id="post-description"><p>{{ .Param "description" | safeHTML }}</p></span>
+    <div id="post-titlebox">
+      <h1 id="post-title">Status Update - {{ .Param "date" | time.Format "January 2006"  }}</h1>
+      <span id="post-description"><p>{{ .Param "description" | safeHTML }}</p></span>
+    </div>
   </div>
-</div>
 
     {{ .Content }}
   {{ end }}
@@ -31,7 +31,7 @@
       {{end}}
       <tr>
         <td>{{.Date.Format "Jan"}}</td>
-        <td><a href="{{.Permalink}}">Stats for {{ .Param "date" | time.Format "January 2006"  }}</a></td>
+        <td><a href="{{.Permalink}}">Status Update {{ .Param "date" | time.Format "01/02/06"  }}</a></td>
       </tr>
       {{ $prev = .Date.Format "2006"}}
       {{end}}

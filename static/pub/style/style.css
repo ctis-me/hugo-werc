@@ -87,7 +87,7 @@ footer > .right { padding:  0;}
 article { flex-basis:  55%; max-width: 60%; }
 
 article h1 {color: black;border-bottom: 2px solid #777;}
-article h2 {color: black;border-bottom: 1px solid #777;}
+article h2 {color: black;border-bottom: 1px solid #777; font-size: 1.3em;}
 article h3 {color: black;border-bottom: 0.5px solid #777;}
 article h4 {color: black;border: none}
 
@@ -96,6 +96,7 @@ article h4 {color: black;border: none}
 .tag-list-count, .category-list-count { font-size: 85%;}
 
 img, video {border: 1.5px solid #777; max-width: 80%; height: auto;}
+blockquote {font-style: italic}
 
 #post-metabox {display: flex; flex-direction:  column; border: 1px solid #777; padding: 5px; max-width: max-content;}
 
@@ -108,6 +109,7 @@ img, video {border: 1.5px solid #777; max-width: 80%; height: auto;}
 
 .gallery-image-container, .cdnimg-container, .cdnvid-container {  display: flex; flex-direction: column; margin: 10px;}
 .gallery-description {margin-top:  5px; font-style: italic; font-size: 90%;}
+.gallery-noborder {border: none;}
 
 pre, code {max-width:  100%; scrollbar-width: none; overflow-x: scroll; overflow-y: scroll;}
 pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }

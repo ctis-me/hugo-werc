@@ -1,3 +1,30 @@
 {{ partial "default_master" . }}
 {{ .Content }}
+
+<div id="recently-updated-container">
+
+  <hr class="recently-updated-separator" />
+  <h3 class="recently-updated-header">Recent Updates</h3>
+
+    <section id="recently-updated-table">
+    {{ $prev := 3000}}
+    {{range (.Site.RegularPages.ByLastmod | last 4).Reverse }}
+      {{if .Date}}
+      {{if gt $prev (.Date.Format "2006")}}
+      {{ if ne $prev 3000}}
+        </table>
+      {{ end }}
+      <table class="recently-updated-posts-index">
+      {{end}}
+      <tr>
+        <td>{{ title .Section | markdownify }}</td>
+        <td><a href="{{.Permalink}}">{{ title .Title | markdownify }}</a></td>
+      </tr>
+      {{ $prev = .Date.Format "2006"}}
+      {{end}}
+    {{end}}
+  </table>
+  </section>
+</div>
+
 {{ partial "footer" . }}

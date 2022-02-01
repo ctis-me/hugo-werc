@@ -1,7 +1,7 @@
 {{ partial "default_master" . }}
 <h1>The requested document doesn't exist</h1>
 
-<div id="goog-fixurl"><div id="goog-wm"><div class="content"><h3 class="other-things"><b>Other things to try:</b></h3><ul><li class="search-goog">Search <b><i>{{ .Site.BaseURL }}</b>:
+<div id="goog-fixurl"><div id="goog-wm"><div class="content"><h3 class="other-things"><b>Other things to try:</b></h3><ul><li class="search-goog">Search <b><i>{{ .Site.BaseURL }}</i></b>:
 
 <form action="https://duckduckgo.com/" method="GET" target="_new" id="cse-search-box-404" style="display: inline">
   <div style="display: inline">
@@ -19,6 +19,5 @@
 </div>
 
 <h4>Or take a look at the <a href="/sitemap.xml">sitemap</a>.</h4>
-<hr>
-<hr>
+
 {{ partial "footer" . }}

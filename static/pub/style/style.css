@@ -116,6 +116,7 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 
 .stats-table-separator, .recently-updated-separator { border-top: dotted 1px; margin-top: 25px;}
 .recently-updated-header { margin-top: 30px; padding-top: 30px; margin-bottom: 8px; padding-bottom: 8px; }
+.recently-updated-posts-index { margin-top: 0; }
 #stats-table-archive h2:first-child, #recently-updated-table h3:first-child { margin-top:  25px; }
 .archive-header, .recently-updated-header {margin:  0; border: none;}
 

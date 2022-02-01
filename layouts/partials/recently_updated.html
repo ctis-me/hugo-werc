@@ -1,0 +1,12 @@
+<div id="recently-updated-container">
+  <h3 class="recently-updated-header">Recent Updates</h3>
+  <section id="recently-updated-table">
+    <ul class="recently-updated-posts-index">
+    {{range (.Site.RegularPages.ByLastmod | last 4).Reverse }}
+      <li>
+        <a href="{{.Permalink}}">{{ title .Title | markdownify }}</a> (in {{ title .Section | markdownify }})
+      </li>
+    {{end}}
+  </ul>
+  </section>
+</div>

@@ -1,11 +1,8 @@
 {{ if .IsNamedParams }}
-  <div class="cdnimg-container gallery-image-container">
-    <img class="gallery-image {{ if .Get "class" }}{{ .Get "class" }}{{ end }}" {{ if .Get "desc" }}alt="{{ .Get "desc" }}"{{ end }} {{ if .Get "desc" }}title="{{ .Get "desc" }}"{{ end }} src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/img/gallery/{{ .Get "path" }}" />
-    <span class="gallery-description">{{ if .Get "desc" }}{{ .Get "desc" }}{{ end }}</span>
-  </div>
-{{ else }}
-  <div class="cdnimg-container gallery-image-container">
-    <img class="gallery-image {{ if len .Params | ge 3 }}{{ .Get 2 }}{{ end }}" {{ if len .Params | ge 2 }}alt="{{ .Get 1 }}"{{ end }} {{ if len .Params | ge 2 }}title="{{ .Get 1 }}"{{ end }} src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/img/gallery/{{ .Get 0 }}" />
-    <span class="gallery-description">{{ if len .Params | ge 2 }}{{ .Get 1 }}{{ end }}</span>
+  <div class="cdnimg-container gallery-image-container {{ if .Get "class" }}{{ .Get "class" }}{{ end }}">
+    {{ if .Get "href" }}<a href="{{ .Get "href" }}">{{ end }}
+      <img class="gallery-image" {{ if .Get "alt" }}alt="{{ .Get "alt" }}"{{ end }} {{ if .Get "alt" }}title="{{ .Get "alt" }}"{{ end }} src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/img/gallery/{{ .Get "src" }}" />
+    {{ if .Get "href" }}</a>{{ end }}
+    <span class="gallery-description">{{ if .Get "alt" }}{{ .Get "alt" }}{{ end }}</span>
   </div>
 {{ end }}

@@ -98,6 +98,7 @@ article h4 {color: black;border: none}
 img, video {border: 1.5px solid #777; max-width: 80%; height: auto;}
 blockquote {font-style: italic}
 
+#post-head { margin-bottom: 2em; }
 #post-metabox {display: flex; flex-direction:  column; border: 1px solid #777; padding: 5px; max-width: max-content;}
 
 #post-categories, #post-tags { max-width: 100%; }
@@ -107,9 +108,18 @@ blockquote {font-style: italic}
 
 #cattags {margin-top:  5px;}
 
-.gallery-image-container, .cdnimg-container, .cdnvid-container {  display: flex; flex-direction: column; margin: 10px;}
-.gallery-description {margin-top:  5px; font-style: italic; font-size: 90%;}
-.gallery-noborder {border: none;}
+.gallery-image-container, .cdnimg-container, .cdnvid-container {  max-width:  80%; display: flex; flex-direction: column; margin: 10px; overflow: hidden}
+.gallery-image-container .gallery-image { max-width: 100%; max-height: 100%; object-fit:  contain}
+.gallery-description {margin-top:  5px; font-style: italic; font-size: 90%; text-align: left; word-break: break-word;}
+.gallery-noborder .gallery-image {border: none;}
+.gallery-rotate90 .gallery-image { transform: rotate(90deg); }
+.gallery-rotate180 .gallery-image { transform: rotate(180deg); }
+.gallery-rotate270 .gallery-image { transform: rotate(270deg); }
+.gallery-micro {max-width: 10%;}
+.gallery-small {max-width: 25%;}
+.gallery-medium {max-width: 50%;}
+.gallery-large {max-width: 75%;}
+.gallery-huge {max-width: 100%;}
 
 pre, code {max-width:  100%; scrollbar-width: none; overflow-x: scroll; overflow-y: scroll;}
 pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }

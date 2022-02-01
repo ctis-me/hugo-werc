@@ -1,8 +1,8 @@
 {{ if .IsNamedParams }}
   <div class="cdnimg-container gallery-image-container {{ if .Get "class" }}{{ .Get "class" }}{{ end }}">
-    {{ if .Get "href" }}<a href="{{ .Get "href" }}">{{ end }}
+    <a href="{{ if .Get "href" }}{{ .Get "href" }}{{ else }}https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/img/gallery/{{ .Get "src" }}{{ end }}">
       <img class="gallery-image" {{ if .Get "alt" }}alt="{{ .Get "alt" }}"{{ end }} {{ if .Get "alt" }}title="{{ .Get "alt" }}"{{ end }} src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/img/gallery/{{ .Get "src" }}" />
-    {{ if .Get "href" }}</a>{{ end }}
+    </a>
     <span class="gallery-description">{{ if .Get "alt" }}{{ .Get "alt" }}{{ end }}</span>
   </div>
 {{ end }}

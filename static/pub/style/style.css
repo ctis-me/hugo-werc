@@ -94,10 +94,12 @@ footer > .right { padding:  0;}
 
 article { flex-basis:  55%; max-width: 60%; }
 
+article h1, article h2, article h3, article h4, article h5, article h6 {font-family: 'Go', Geneva, Verdana, sans-serif; padding-bottom: 3px}
+
 article h1 {color: black;border-bottom: 2px solid #777;}
 article h2 {color: black;border-bottom: 1px solid #777; font-size: 1.3em;}
 article h3 {color: black;border-bottom: 0.5px solid #777;}
-article h4 {color: black;border: none}
+article h4 {color: black;border: none; padding-bottom: 0px;}
 
 .category-list-link, .tag-list-link, .indexListItem > a {font-size: 110%}
 .indexListItem {padding-left:  10px; margin-left:  10px;}

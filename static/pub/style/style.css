@@ -12,7 +12,7 @@ footer { display: flex; justify-content: space-between; }
 
 /* cut here to leave vanity behind */
 
-body { margin:0; padding: 0; font-size: 90%; font-family: Helvetica, Verdana, Arial, 'Liberation Sans', FreeSans, sans-serif; }
+body { margin:0; padding: 0; font-size: 110%; font-family: Helvetica, Verdana, Arial, 'Liberation Sans', FreeSans, sans-serif; }
 a { text-decoration: none; color: }
 a:hover { text-decoration: underline }
 
@@ -107,7 +107,7 @@ article h4 {color: black;border: none; padding-bottom: 0px;}
 
 img, video {border: 1.5px solid #777; max-width: 80%; height: auto;}
 blockquote {font-style: italic}
-pre, code { font-size:  90%; font-family: 'Go Mono', 'Courier New', Courier, monospace }
+pre, code { font-size:  95%; font-family: 'Go Mono', 'Courier New', Courier, monospace }
 
 #post-head { margin-bottom: 2em; }
 #post-metabox {display: flex; flex-direction:  column; border: 1px solid #777; padding: 5px; max-width: max-content;}
@@ -142,7 +142,7 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 .archive-header, .recently-updated-header {margin:  0; border: none;}
 
 @media only screen and (max-width: 600px) {
-    body { font-size: 100% }
+    body { font-size: 110% }
     article { padding-left: 2%; flex-basis: 100%; max-width: 96%; text-align: justify;}
     article h1, article h2, article h3, article h4, article h5, article h6 { text-align: left; }
     img, video { max-width: 100%; }

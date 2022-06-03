@@ -10,6 +10,10 @@
     <title>{{ if .Params.title }}{{ .Params.title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
 
     <link rel="stylesheet" href="{{ "/pub/style/style.css" | relURL }}" type="text/css" media="screen, handheld" title="default">
+
+    <link rel="preload" href="/pub/font/Go-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/pub/font/Go-Mono.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="shortcut icon" href="https://cdn.ctis.me/file/ctisme-cdn/www.ctis.me/resources/images/favicon.png" type="image/vnd.microsoft.icon">
 
     <link rel="canonical" href="{{ .Permalink }}" />

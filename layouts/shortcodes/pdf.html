@@ -1,5 +1,3 @@
-<script type="text/javascript" src='{{"/pub/js/pdfjs/build/pdf.js" | relURL}}'></script>
-
 <div class="embed-pdf-container" id="embed-pdf-container-{{ substr (.Get "src" | md5) 0 8 }}">
     <div class="pdf-loadingWrapper" id="pdf-loadingWrapper-{{ substr (.Get "src" | md5) 0 8 }}">
         <div class="pdf-loading" id="pdf-loading-{{ substr (.Get "src" | md5) 0 8 }}"></div>

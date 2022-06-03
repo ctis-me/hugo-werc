@@ -35,5 +35,9 @@
     <meta name="author" content="Charlton Trezevant">
     <meta name="twitter:site" content="{{ .Site.Params.TwitterUsername }}">
     <meta name="twitter:creator" content="{{ .Site.Params.TwitterUsername }}">
+
+    {{ if .HasShortcode "pdf" }}
+        <script type="text/javascript" src='{{"/pub/js/pdfjs/build/pdf.js" | relURL}}'></script>
+    {{ end }}
 </head>
 <body>

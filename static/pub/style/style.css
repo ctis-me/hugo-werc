@@ -143,8 +143,8 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 
 @media only screen and (max-width: 600px) {
     body { font-size: 100% }
-    article { flex-basis:  100%; max-width: 96%; }
-    img { max-width: 100%; }
+    article { padding-left: 2%; flex-basis:  100%; max-width: 96%; }
+    img, video { max-width: 100%; }
     .gallery-image-container, .cdnimg-container, .cdnvid-container {  max-width:  100%; }
     .gallery-micro {max-width: 50%;}
     .gallery-small {max-width: 70%;}
@@ -169,6 +169,7 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
   display: none;
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .pdf-source {

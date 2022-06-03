@@ -143,7 +143,7 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 
 @media only screen and (max-width: 600px) {
     body { font-size: 100% }
-    article { padding-left: 2%; flex-basis:  100%; max-width: 96%; }
+    article { padding-left: 2%; flex-basis: 100%; max-width: 96%; text-align: justify;}
     img, video { max-width: 100%; }
     .gallery-image-container, .cdnimg-container, .cdnvid-container {  max-width:  100%; }
     .gallery-micro {max-width: 50%;}

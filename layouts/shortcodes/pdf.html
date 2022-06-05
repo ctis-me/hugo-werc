@@ -11,11 +11,11 @@
     <span>
       <span class="pdf-pagenum" id="pdf-pagenum-{{ substr (.Get "src" | md5) 0 8 }}"></span> / <span class="pdf-pagecount" id="pdf-pagecount-{{ substr (.Get "src" | md5) 0 8 }}"></span>
     </span>
-    <a class="pdf-source" id="pdf-source-{{ substr (.Get "src" | md5) 0 8 }}" href="'{{ .Get "src" }}'">[pdf]</a>
+    <a class="pdf-source" id="pdf-source-{{ substr (.Get "src" | md5) 0 8 }}" href="{{ .Get "src" }}">[pdf]</a>
 </div>
 
 <noscript>
-View the PDF file <a class="pdf-source" id="pdf-source-noscript-{{ substr (.Get "src" | md5) 0 8 }}" href="'{{ .Get "src" }}'">[here]</a>.
+View the PDF file <a class="pdf-source" id="pdf-source-noscript-{{ substr (.Get "src" | md5) 0 8 }}" href="{{ .Get "src" }}">here</a>.
 </noscript>
 
 <script type="text/javascript">

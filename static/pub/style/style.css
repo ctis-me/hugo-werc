@@ -94,7 +94,7 @@ footer > .right { padding:  0;}
 
 article { flex-basis:  55%; max-width: 60%; }
 
-article h1, article h2, article h3, article h4, article h5, article h6 { padding-bottom: 3px}
+article h1, article h2, article h3, article h4, article h5, article h6 { color: black; padding-bottom: 3px}
 
 article h1 {color: black;border-bottom: 2px solid #777;}
 article h2 {color: black;border-bottom: 1px solid #777; font-size: 1.3em;}
@@ -141,22 +141,6 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 #stats-table-archive h2:first-child, #recently-updated-table h3:first-child { margin-top:  25px; }
 .archive-header, .recently-updated-header {margin:  0; border: none;}
 
-@media only screen and (max-width: 600px) {
-    body { font-size: 110% }
-    article { padding-left: 2%; flex-basis: 100%; max-width: 96%; text-align: justify;}
-    article h1, article h2, article h3, article h4, article h5, article h6 { text-align: left; }
-    img, video { max-width: 100%; }
-    .gallery-image-container, .cdnimg-container, .cdnvid-container {  max-width:  100%; }
-    .gallery-micro {max-width: 50%;}
-    .gallery-small {max-width: 70%;}
-    .gallery-medium {max-width: 80%;}
-    .gallery-large {max-width: 90%;}
-    .gallery-huge {max-width: 100%;}
-    footer > .left { max-width:  40%; font-size: 80%}
-    #cse-search-box-footer-query { width: 60%; }
-}
-
-
 /* PDF embed shortcode */
 .pdf-canvas {
   border: 1px solid black;
@@ -201,4 +185,21 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 }
 @-webkit-keyframes pdf-spin {
   to { -webkit-transform: rotate(360deg); }
+}
+
+
+@media only screen and (max-width: 600px) {
+    body { font-size: 110% }
+    article { padding-left: 2%; flex-basis: 100%; max-width: 96%; text-align: justify;}
+    article h1, article h2, article h3, article h4, article h5, article h6 { text-align: left; }
+    table, td, #post-head, article li { text-align: left }
+    img, video { max-width: 100%; }
+    .gallery-image-container, .cdnimg-container, .cdnvid-container {  max-width:  100%; }
+    .gallery-micro {max-width: 50%;}
+    .gallery-small {max-width: 70%;}
+    .gallery-medium {max-width: 100%;}
+    .gallery-large {max-width: 100%;}
+    .gallery-huge {max-width: 100%;}
+    footer > .left { max-width:  40%; font-size: 80%}
+    #cse-search-box-footer-query { width: 60%; }
 }

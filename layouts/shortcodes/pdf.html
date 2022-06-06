@@ -1,11 +1,11 @@
-<div class="embed-pdf-container" id="embed-pdf-container-{{ substr (.Get "src" | md5) 0 8 }}">
+<div class="embed-pdf-container {{ if .Get "class" }}{{ .Get "class" }}{{ end }}" id="embed-pdf-container-{{ substr (.Get "src" | md5) 0 8 }}">
     <div class="pdf-loadingWrapper" id="pdf-loadingWrapper-{{ substr (.Get "src" | md5) 0 8 }}">
         <div class="pdf-loading" id="pdf-loading-{{ substr (.Get "src" | md5) 0 8 }}"></div>
     </div>
     <canvas class="pdf-canvas" id="pdf-canvas-{{ substr (.Get "src" | md5) 0 8 }}"></canvas>
 </div>
 
-<div class="pdf-paginator" id="pdf-paginator-{{ substr (.Get "src" | md5) 0 8 }}">
+<div class="pdf-paginator {{ if .Get "class" }}{{ .Get "class" }}{{ end }}" id="pdf-paginator-{{ substr (.Get "src" | md5) 0 8 }}">
     <button id="pdf-prev-{{ substr (.Get "src" | md5) 0 8 }}">Previous</button>
     <button id="pdf-next-{{ substr (.Get "src" | md5) 0 8 }}">Next</button> &nbsp; &nbsp;
     <span>
@@ -15,7 +15,7 @@
 </div>
 
 <noscript>
-View the PDF file <a class="pdf-source" id="pdf-source-noscript-{{ substr (.Get "src" | md5) 0 8 }}" href="{{ .Get "src" }}">here</a>.
+View the PDF file <a class="pdf-source {{ if .Get "class" }}{{ .Get "class" }}{{ end }}" id="pdf-source-noscript-{{ substr (.Get "src" | md5) 0 8 }}" href="{{ .Get "src" }}">here</a>.
 </noscript>
 
 <script type="text/javascript">
@@ -24,7 +24,7 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-{{ substr (.Get 
 
     var hidePaginator = "{{ .Get "hidePaginator" }}" === "true";
     var hideLoader = "{{ .Get "hideLoader" }}" === "true";
-    var selectedPageNum = parseInt("{{ .Get "renderPageNum" }}") || 1;
+    var selectedPageNum = parseInt("{{ .Get "startPage" }}") || 1;
 
     // Loaded via <script> tag, create shortcut to access PDF.js exports.
     var pdfjsLib = window['pdfjs-dist/build/pdf'];

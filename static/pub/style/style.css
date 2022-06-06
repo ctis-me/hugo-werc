@@ -124,13 +124,13 @@ pre, code { font-size:  95%; font-family: 'Go Mono', 'Courier New', Courier, mon
 .gallery-description {margin-top:  5px; font-style: italic; font-size: 95%; text-align: left; word-break: break-word;}
 .gallery-noborder .gallery-image {border: none;}
 .gallery-rotate90 .gallery-image { transform: rotate(90deg); }
-.gallery-rotate180 .gallery-image { transform: rotate(180deg); }
+.gallery-rotate180 .gallery-image { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -o-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
 .gallery-rotate270 .gallery-image { transform: rotate(270deg); }
 .gallery-micro {max-width: 10%;}
-.gallery-small {max-width: 25%;}
-.gallery-medium {max-width: 50%;}
-.gallery-large {max-width: 75%;}
-.gallery-huge {max-width: 100%;}
+.gallery-small, .pdf-small {max-width: 25%;}
+.gallery-medium, .pdf-medium {max-width: 50%;}
+.gallery-large, .pdf-large {max-width: 75%;}
+.gallery-huge, .pdf-huge {max-width: 100%;}
 
 pre, code {max-width:  100%; scrollbar-width: none; overflow-x: scroll; overflow-y: scroll;}
 pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
@@ -186,7 +186,6 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 @-webkit-keyframes pdf-spin {
   to { -webkit-transform: rotate(360deg); }
 }
-
 
 @media only screen and (max-width: 600px) {
     body { font-size: 110% }

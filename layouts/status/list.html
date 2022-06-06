@@ -15,8 +15,8 @@
   {{ end }}
 
   <br />
+  <h2 class="archive-header">Archives</h2>
   <hr class="stats-table-separator" />
-  <h3 class="archive-header">Monthly Archive</h3>
 
     <section id="stats-table-archive">
     {{ $prev := 3000}}
@@ -30,8 +30,8 @@
       <table class="posts-index">
       {{end}}
       <tr>
-        <td>{{.Date.Format "Jan"}}</td>
-        <td><a href="{{.Permalink}}">Status Update {{ .Param "date" | time.Format "01/02/06"  }}</a></td>
+        <td class="posts-table-date">{{.Date.Format "Jan"}}</td>
+        <td class="posts-table-link"><a href="{{.Permalink}}">Status Update {{ .Param "date" | time.Format "01/06"  }}</a></td>
       </tr>
       {{ $prev = .Date.Format "2006"}}
       {{end}}

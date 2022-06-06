@@ -135,11 +135,14 @@ pre, code { font-size:  95%; font-family: 'Go Mono', 'Courier New', Courier, mon
 pre, code {max-width:  100%; scrollbar-width: none; overflow-x: scroll; overflow-y: scroll;}
 pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 
-.stats-table-separator, .recently-updated-separator { border-top: dotted 1px; margin-top: 25px;}
+.stats-table-separator, .recently-updated-separator { border-top: dotted 1px; margin-top: 6px; margin-bottom: 6px}
 .recently-updated-header { margin-top: 30px; padding-top: 30px; margin-bottom: 8px; padding-bottom: 8px; }
 .recently-updated-posts-index { margin-top: 0; }
+.recently-updated-section {text-decoration: none; color: black; font-weight: normal}
 #stats-table-archive h2:first-child, #recently-updated-table h3:first-child { margin-top:  25px; }
 .archive-header, .recently-updated-header {margin:  0; border: none;}
+.archive-header { margin-top: 50px; }
+
 
 /* PDF embed shortcode */
 .pdf-canvas {
@@ -189,7 +192,9 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 
 @media only screen and (max-width: 600px) {
     body { font-size: 110% }
-    article { padding-left: 2%; flex-basis: 100%; max-width: 96%; text-align: justify;}
+    .posts-table-date {white-space: nowrap; font-size: 90%;}
+    article, .indexListItem { padding-left: 2%; flex-basis: 100%; max-width: 96%; }
+    article { text-align: justify; }
     article h1, article h2, article h3, article h4, article h5, article h6 { text-align: left; }
     table, td, #post-head, article li { text-align: left }
     img, video { max-width: 100%; }

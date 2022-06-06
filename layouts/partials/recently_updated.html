@@ -4,7 +4,7 @@
     <ul class="recently-updated-posts-index">
     {{range (.Site.RegularPages.ByLastmod | last 4).Reverse }}
       <li>
-        <a href="{{.Permalink}}">{{ title .Title | markdownify }}</a> (in {{ title .Section | markdownify }})
+        <a href="{{.Permalink}}">{{ title .Title | markdownify }}</a> (in <a class="recently-updated-section" href="{{ .Section }}">{{ title .Section | markdownify }}</a>)
       </li>
     {{end}}
   </ul>

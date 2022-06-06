@@ -20,8 +20,8 @@
       <table class="posts-index">
       {{end}}
       <tr>
-        <td>{{.Date.Format "02 Jan"}}</td>
-        <td><a href="{{.Permalink}}">{{ title .Title | markdownify }}</a></td>
+        <td class="posts-table-date">{{.Date.Format "02 Jan"}}</td>
+        <td class="posts-table-link"><a href="{{.Permalink}}">{{ title .Title | markdownify }}</a></td>
       </tr>
       {{ $prev = .Date.Format "2006"}}
       {{end}}

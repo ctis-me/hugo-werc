@@ -139,6 +139,7 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 .recently-updated-header { margin-top: 30px; padding-top: 30px; margin-bottom: 8px; padding-bottom: 8px; }
 .recently-updated-posts-index { margin-top: 0; }
 .recently-updated-section {text-decoration: none; color: black; font-weight: normal}
+#recently-updated-rss { margin-top: 25px; padding-top: 25px; }
 #stats-table-archive h2:first-child, #recently-updated-table h3:first-child { margin-top:  25px; }
 .archive-header, .recently-updated-header {margin:  0; border: none;}
 .archive-header { margin-top: 50px; }

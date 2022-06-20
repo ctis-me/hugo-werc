@@ -173,7 +173,7 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
   padding-left: 0.5%;
 }
 
-.rss-xsl-post-link, .rss-xsl-post-more {
+.rss-xsl-post-link, .rss-xsl-post-more, .rss-xsl-home-link {
   font-weight: normal;
   color: rgb(0,102,204)
 }
@@ -224,6 +224,7 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 @keyframes pdf-spin {
   to { -webkit-transform: rotate(360deg); }
 }
+
 @-webkit-keyframes pdf-spin {
   to { -webkit-transform: rotate(360deg); }
 }

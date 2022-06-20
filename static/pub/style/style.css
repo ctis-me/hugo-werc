@@ -140,11 +140,41 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 .recently-updated-posts-index { margin-top: 0; }
 .recently-updated-section {text-decoration: none; color: black; font-weight: normal}
 .rss-feed-icon { border: none; width: 16px; }
-#recently-updated-rss { margin-top: 25px; padding-top: 25px; }
+#rss-icon-link { margin-top: 25px; padding-top: 25px; }
 #stats-table-archive h2:first-child, #recently-updated-table h3:first-child { margin-top:  25px; }
 .archive-header, .recently-updated-header {margin:  0; border: none;}
 .archive-header { margin-top: 50px; }
 
+/* RSS XSL */
+
+.rss-xsl {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Go', Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.rss-xsl-title {
+  background-color: #e7fbfd;
+  border-top: 2px solid #777;
+  border-bottom: 2px solid #777;
+  font-weight:  normal;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.rss-xsl-description {
+  padding-left: 1%;
+}
+
+.rss-xsl-post-link {
+  font-weight: normal;
+}
+
+.rss-xsl-post-preview {
+  font-family: 'Go Mono', 'Courier New', Courier, monospace
+}
 
 /* PDF embed shortcode */
 .pdf-canvas {

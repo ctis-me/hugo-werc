@@ -173,8 +173,9 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
   padding-left: 0.5%;
 }
 
-.rss-xsl-post-link {
+.rss-xsl-post-link, .rss-xsl-post-more {
   font-weight: normal;
+  color: rgb(0,102,204)
 }
 
 .rss-xsl-post-preview {

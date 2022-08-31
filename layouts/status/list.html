@@ -3,6 +3,9 @@
   {{ $statpages := ($.Site.GetPage "section" .Section).Pages.ByPublishDate.Reverse }}
 
   {{ range first 1 $statpages }}
+
+    {{ partial "shortcode_dependencies.html" . }}
+
     <div id="post-head">
 
     <div id="post-titlebox">

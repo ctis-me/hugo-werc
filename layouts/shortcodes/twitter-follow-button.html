@@ -1,0 +1,7 @@
+{{ if .IsNamedParams }}
+  {{ if .Get "handle" }}
+  <a href="https://twitter.com/{{ .Get "handle" }}?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @{{ .Get "handle" }}</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  {{ end }}
+{{ else if .Site.Params.TwitterUsername }}
+  <a href="https://twitter.com/{{ .Site.Params.TwitterUsername }}?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @{{ .Site.Params.TwitterUsername }}</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{{ end }}

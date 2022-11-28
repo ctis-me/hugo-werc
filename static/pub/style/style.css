@@ -120,7 +120,7 @@ pre, code { font-size:  95%; font-family: 'Go Mono', 'Courier New', Courier, mon
 #cattags {margin-top:  5px;}
 
 .gallery-image-container, .cdnimg-container, .cdnvid-container {  max-width:  80%; display: flex; flex-direction: column; margin: 10px;}
-.gallery-image-container .gallery-image { max-width: 100%; max-height: 100%; object-fit:  contain}
+.gallery-image-container .gallery-image, .gallery-video-container, .gallery-video { max-width: 100%; max-height: 100%; object-fit:  contain}
 .gallery-description {margin-top:  5px; font-style: italic; font-size: 95%; text-align: left; word-break: break-word;}
 .gallery-noborder .gallery-image {border: none;}
 .gallery-rotate90 .gallery-image { transform: rotate(90deg); }

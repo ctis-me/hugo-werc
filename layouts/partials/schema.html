@@ -1,7 +1,8 @@
 <script type="application/ld+json">
 {
-{{ if (isset .Params "description") }}
   "@context": "https://schema.org",
+
+{{ if (isset .Params "description") }}
   "@type": "BlogPosting",
   "headline": {{ .Title }},
 
@@ -29,11 +30,11 @@
   },
   "description": {{ .Summary | plainify | safeHTML }},
   "keywords": [{{ range $i, $e := .Params.category }}{{ if $i }}, {{ end }}{{ $e }}{{ end }},{{ range $i, $e := .Params.tag }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}],
-{{ end }}
-  "@context": "https://schema.org",
+{{ else }}
   "@type": "Organization",
   "name": {{ .Site.Title }},
   "url": {{ .Site.BaseURL }},
+{{ end }}
   "sameAs": [
     "https://social.sdf.org/@chtzvt",
     "https://www.instagram.com/chtzvt",

@@ -1,0 +1,44 @@
+<script type="application/ld+json">
+{
+{{ if (isset .Params "description") }}
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title }},
+
+  {{ if (isset .Params "featuredImage") }}
+  "image": "https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/img/gallery/{{ .Params.featuredImage }}",
+  {{ else }}
+  "image": {{ .Site.Params.featuredImage | absURL }},
+  {{ end }}
+  "identifier": {{ .Permalink }},
+  "url": {{ .Permalink }},
+  "datePublished": {{ .PublishDate }},
+  "dateModified": {{ .Lastmod }},
+  "author": {
+    "@type": "Person",
+    "name": {{ .Site.Params.author }}
+  },
+  "mainEntityOfPage": { "@type": "WebPage" },
+   "publisher": {
+    "@type": "Organization",
+    "name": {{ .Site.Title }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ .Site.Params.favicon }}
+    }
+  },
+  "description": {{ .Summary | plainify | safeHTML }},
+  "keywords": [{{ range $i, $e := .Params.category }}{{ if $i }}, {{ end }}{{ $e }}{{ end }},{{ range $i, $e := .Params.tag }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}],
+{{ end }}
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ .Site.Title }},
+  "url": {{ .Site.BaseURL }},
+  "sameAs": [
+    "https://social.sdf.org/@chtzvt",
+    "https://www.instagram.com/chtzvt",
+    "https://twitter.com/chtzvt",
+    "https://github.com/ctrezevant"
+  ]
+}
+</script>

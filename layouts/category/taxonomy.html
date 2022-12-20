@@ -14,12 +14,32 @@
       <h2>{{ .Date.Format "2006" }}</h2>
       <table class="posts-index">
       {{end}}
-      <tr>
+      <tr class="h-entry">
         <td>{{.Date.Format "02 Jan"}}</td>
-        <td><a href="{{.Permalink}}">{{ title .Title | markdownify }}</a></td>
-      </tr>
-      {{ $prev = .Date.Format "2006"}}
-      {{end}}
+        <td><a class="p-name u-url" href="{{.Permalink}}">{{ title .Title | markdownify }}</a></td>
+        <span class="dt-published" style="display:none">{{ .Param "date" }}</span>
+        <span class="p-summary" style="display:none">{{ .Param "description" | safeHTML }}</span>
+        <address style="display:none" class="p-author author h-card vcard">
+          <a href="https://www.ctis.me/" class="p-name fn" rel="author">Charlton Trezevant</a>
+        </address>
+        {{ if isset .Params "category" }}
+          {{ with .Params.category }}
+            {{ range $i, $tag := (. | sort) }}
+                <span style="display:none" class="p-category"><a href='/category/{{ . | urlize }}'>{{ . | title }}</a></span>
+            {{ end }}
+          {{end}}
+        {{end}}
+
+        {{ if isset .Params "tag" }}
+          {{ with .Params.tag }}
+            {{ range $i, $tag := (. | sort) }}
+               <span style="display:none" class="p-category"><a href='/tag/{{ . | urlize }}'>{{ . }}</a></span>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        </tr>
+        {{ $prev = .Date.Format "2006"}}
+        {{end}}
     {{end}}
   </table>
   </section>

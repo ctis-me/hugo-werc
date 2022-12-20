@@ -12,7 +12,7 @@
   <div class="cdnvid-container gallery-video-container">
     <video controls class="gallery-video" {{ if len .Params | eq 2 }}alt="{{ .Get 1 }}"{{ end }} {{ if len .Params | eq 2 }}title="{{ .Get 1 }}"{{ end }} poster="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/gallery/{{ strings.TrimSuffix (path.Ext $name) $name }}-thumbnail.webp"/>
       <source src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/gallery/{{ strings.TrimSuffix (path.Ext $name) $name }}.webm"></source> 
-      <source src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/gallery/{{ .Get "src" }}"></source>
+      <source src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/gallery/{{ .Get 0 }}"></source>
     </video>
     <span class="gallery-description">{{ if len .Params | eq 2 }}{{ .Get 1 }}{{ end }}</span>
   </div>

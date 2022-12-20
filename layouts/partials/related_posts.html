@@ -5,7 +5,7 @@
   <ul>
     {{ range . }}
     <li class="h-entry">
-      <a class="related-posts-link u-url" href="{{ .RelPermalink }}">{{ title .Title | markdownify }}</a>
+      <a class="related-posts-link p-name u-url" href="{{ .RelPermalink }}">{{ title .Title | markdownify }}</a>
       <span class="dt-published" style="display:none">{{ .Param "date" }}</span>
       <span class="p-summary" style="display:none">{{ .Param "description" | safeHTML }}</span>
       <address style="display:none" class="p-author author h-card vcard">

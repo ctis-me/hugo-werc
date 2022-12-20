@@ -41,8 +41,8 @@
       <table class="posts-index">
       {{end}}
       <tr class="h-entry">
-        <td class="posts-table-date p-name">{{.Date.Format "Jan"}}</td>
-        <td class="posts-table-link u-url"><a href="{{.Permalink}}">Status Update {{ .Param "date" | time.Format "01/06"  }}</a></td>
+        <td class="posts-table-date">{{.Date.Format "Jan"}}</td>
+        <td class="posts-table-link p-name u-url"><a href="{{.Permalink}}">Status Update {{ .Param "date" | time.Format "01/06"  }}</a></td>
         <span style="display:none" class="post-pubdate-date dt-published">{{ .Param "date" }}</span>
         <address style="display:none" class="p-author author h-card vcard">
           <a href="https://www.ctis.me/" class="p-name fn" rel="author">Charlton Trezevant</a>

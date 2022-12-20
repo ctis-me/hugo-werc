@@ -10,7 +10,7 @@
 
   <div id="post-metabox">
       <div id="post-pubdate">
-        <span id="post-pubdate-label"><a class="u-url" href="{{ .Permalink }}">Published:</a> </span><span class="post-pubdate-date dt-published" alt="{{ .Param "date" }}" title="{{ .Param "date" }}">{{ .Param "date" | time.Format "Jan 2006"  }}</span>
+        <span id="post-pubdate-label"><a class="u-url" rel="permalink" href="{{ .Permalink }}">Published:</a> </span><span class="post-pubdate-date dt-published" alt="{{ .Param "date" }}" title="{{ .Param "date" }}">{{ .Param "date" | time.Format "Jan 2006"  }}</span>
       </div>
 
       {{ if isset .Params "category" }}
@@ -18,7 +18,7 @@
         <span id="post-categories-label"><a href="/category/">Category:</a> </span>
         {{ with .Params.category }}
           {{ range $i, $tag := (. | sort) }}
-            <span class="post-categories-category p-category"><a href='/category/{{ . | urlize }}'>{{ . | title }}</a>{{ if ne $i (sub (len $.Params.category) 1) }}, {{ else }}{{ end }}</span>
+            <span class="post-categories-category p-category"><a href='/category/{{ . | urlize }}'>{{ . | title }}</a></span><span>{{ if ne $i (sub (len $.Params.category) 1) }}, {{ else }}{{ end }}</span>
           {{ end }}
         {{end}}
       </div>
@@ -29,7 +29,7 @@
         <span id="post-tags-label"><a href="/tag/">Tags:</a> </span>
         {{ with .Params.tag }}
           {{ range $i, $tag := (. | sort) }}
-            <span class="post-tags-tag p-category"><a href='/tag/{{ . | urlize }}'>{{ . }}</a>{{ if ne $i (sub (len $.Params.tag) 1) }}, {{ else }}{{ end }}</span>
+            <span class="post-tags-tag p-category"><a href='/tag/{{ . | urlize }}'>{{ . }}</a></span><span>{{ if ne $i (sub (len $.Params.tag) 1) }}, {{ else }}{{ end }}</span>
           {{ end }}
         {{end}}
       </div>

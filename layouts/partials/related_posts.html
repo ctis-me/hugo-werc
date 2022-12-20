@@ -11,6 +11,21 @@
       <address style="display:none" class="p-author author h-card vcard">
         <a href="https://www.ctis.me/" class="p-name fn" rel="author">Charlton Trezevant</a>
       </address>
+      {{ if isset .Params "category" }}
+        {{ with .Params.category }}
+          {{ range $i, $tag := (. | sort) }}
+              <span style="display:none" class="p-category"><a href='/category/{{ . | urlize }}'>{{ . | title }}</a></span>
+          {{ end }}
+        {{end}}
+      {{end}}
+
+      {{ if isset .Params "tag" }}
+        {{ with .Params.tag }}
+          {{ range $i, $tag := (. | sort) }}
+             <span style="display:none" class="p-category"><a href='/tag/{{ . | urlize }}'>{{ . }}</a></span>
+          {{ end }}
+        {{ end }}
+      {{ end }}
     </li>
     {{ end }}
   </ul>

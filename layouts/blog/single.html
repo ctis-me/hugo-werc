@@ -1,15 +1,16 @@
 {{ partial "default_master" . }}
 
+<div class="h-entry">
 <div id="post-head">
 
   <div id="post-titlebox">
-    <h1 id="post-title">{{ title .Title | markdownify }}</h1>
-    <span id="post-description"><p>{{ .Param "description" | safeHTML }}</p></span>
+    <h1 id="post-title" class="p-name">{{ title .Title | markdownify }}</h1>
+    <span id="post-description" class="p-summary"><p>{{ .Param "description" | safeHTML }}</p></span>
   </div>
 
   <div id="post-metabox">
       <div id="post-pubdate">
-        <span id="post-pubdate-label"><a href="/blog/">Published:</a> </span><span class="post-pubdate-date" alt="{{ .Param "date" }}" title="{{ .Param "date" }}">{{ .Param "date" | time.Format ":date_medium"  }}</span>
+        <span id="post-pubdate-label"><a class="u-url" href="{{ .Permalink }}">Published:</a> </span><span class="post-pubdate-date dt-published" alt="{{ .Param "date" }}" title="{{ .Param "date" }}">{{ .Param "date" | time.Format ":date_medium"  }}</span>
       </div>
 
       {{ if isset .Params "category" }}
@@ -17,7 +18,7 @@
         <span id="post-categories-label"><a href="/category/">Category:</a> </span>
         {{ with .Params.category }}
           {{ range $i, $tag := (. | sort) }}
-            <span class="post-categories-category"><a href='/category/{{ . | urlize }}'>{{ . | title }}</a>{{ if ne $i (sub (len $.Params.category) 1) }}, {{ else }}{{ end }}</span>
+            <span class="post-categories-category p-category"><a href='/category/{{ . | urlize }}'>{{ . | title }}</a>{{ if ne $i (sub (len $.Params.category) 1) }}, {{ else }}{{ end }}</span>
           {{ end }}
         {{end}}
       </div>
@@ -28,16 +29,22 @@
         <span id="post-tags-label"><a href="/tag/">Tags:</a> </span>
         {{ with .Params.tag }}
           {{ range $i, $tag := (. | sort) }}
-            <span class="post-tags-tag"><a href='/tag/{{ . | urlize }}'>{{ . }}</a>{{ if ne $i (sub (len $.Params.tag) 1) }}, {{ else }}{{ end }}</span>
+            <span class="post-tags-tag p-category"><a href='/tag/{{ . | urlize }}'>{{ . }}</a>{{ if ne $i (sub (len $.Params.tag) 1) }}, {{ else }}{{ end }}</span>
           {{ end }}
         {{end}}
       </div>
       {{end}}
+
+    <address style="display:none" class="p-author author h-card vcard">
+      <a href="https://www.ctis.me/" class="p-name fn" rel="author">Charlton Trezevant</a>
+    </address>
   </div>
 </div>
 
+<div class="e-content">
 {{ .Content }}
-
+</div>
+</div>
 {{ partial "related_posts" . }}
 
 {{ partial "footer" . }}

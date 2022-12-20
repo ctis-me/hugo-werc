@@ -3,8 +3,13 @@
   <section id="recently-updated-table">
     <ul class="recently-updated-posts-index">
     {{range (.Site.RegularPages.ByLastmod | last 4).Reverse }}
-      <li>
-        <a href="{{.Permalink}}">{{ title .Title | markdownify }}</a> (in <a class="recently-updated-section" href="{{ .Section }}">{{ title .Section | markdownify }}</a>)
+      <li class="h-entry">
+        <a class="p-name u-url" href="{{.Permalink}}">{{ title .Title | markdownify }}</a> (in <a class="recently-updated-section p-category" href="{{ .Section }}">{{ title .Section | markdownify }}</a>)
+        <span class="dt-published" style="display:none">{{ .Param "date" }}</span>
+        <span class="p-summary" style="display:none">{{ .Param "description" | safeHTML }}</span>
+        <address style="display:none" class="p-author author h-card vcard">
+          <a href="https://www.ctis.me/" class="p-name fn" rel="author">Charlton Trezevant</a>
+        </address>
       </li>
     {{end}}
   </ul>

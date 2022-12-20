@@ -4,7 +4,14 @@
   <h3>See Also...</h3>
   <ul>
     {{ range . }}
-    <li><a class="related-posts-link" href="{{ .RelPermalink }}">{{ title .Title | markdownify }}</a></li>
+    <li class="h-entry">
+      <a class="related-posts-link u-url" href="{{ .RelPermalink }}">{{ title .Title | markdownify }}</a>
+      <span class="dt-published" style="display:none">{{ .Param "date" }}</span>
+      <span class="p-summary" style="display:none">{{ .Param "description" | safeHTML }}</span>
+      <address style="display:none" class="p-author author h-card vcard">
+        <a href="https://www.ctis.me/" class="p-name fn" rel="author">Charlton Trezevant</a>
+      </address>
+    </li>
     {{ end }}
   </ul>
 </div>

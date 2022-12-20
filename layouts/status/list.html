@@ -5,16 +5,24 @@
   {{ range first 1 $statpages }}
 
     {{ partial "shortcode_dependencies.html" . }}
-
+    <div class="h-entry">
     <div id="post-head">
 
     <div id="post-titlebox">
-      <h1 id="post-title">Status Update - {{ .Param "date" | time.Format "January 2006"  }}</h1>
-      <span id="post-description"><p>{{ .Param "description" | safeHTML }}</p></span>
+      <h1 id="post-title" class="p-name">Status Update - {{ .Param "date" | time.Format "January 2006"  }}</h1>
+      <span id="post-description" class="p-summary"><p>{{ .Param "description" | safeHTML }}</p></span>
+      <span style="display:none" class="post-pubdate-date dt-published">{{ .Param "date" }}</span>
+      <a style="display:none" class="u-url" rel="canonical" href="{{ .Permalink }}">Permalink</a>
+      <address style="display:none" class="p-author author h-card vcard">
+        <a href="https://www.ctis.me/" class="p-name fn" rel="author">Charlton Trezevant</a>
+      </address>
     </div>
   </div>
 
-    {{ .Content }}
+    <div class="e-content">
+      {{ .Content }}
+    </div>
+    </div>
   {{ end }}
 
   <br />
@@ -32,9 +40,13 @@
       <h2 class="stats-table-year">{{ .Date.Format "2006" }}</h2>
       <table class="posts-index">
       {{end}}
-      <tr>
-        <td class="posts-table-date">{{.Date.Format "Jan"}}</td>
-        <td class="posts-table-link"><a href="{{.Permalink}}">Status Update {{ .Param "date" | time.Format "01/06"  }}</a></td>
+      <tr class="h-entry">
+        <td class="posts-table-date p-name">{{.Date.Format "Jan"}}</td>
+        <td class="posts-table-link u-url"><a href="{{.Permalink}}">Status Update {{ .Param "date" | time.Format "01/06"  }}</a></td>
+        <span style="display:none" class="post-pubdate-date dt-published">{{ .Param "date" }}</span>
+        <address style="display:none" class="p-author author h-card vcard">
+          <a href="https://www.ctis.me/" class="p-name fn" rel="author">Charlton Trezevant</a>
+        </address>
       </tr>
       {{ $prev = .Date.Format "2006"}}
       {{end}}

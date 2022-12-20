@@ -1,3 +1,5 @@
+    <meta name="robots" content="index,follow">
+    
     <meta name="author" content="Charlton Trezevant">
 
     <link href="https://github.com/ctrezevant" rel="me">
@@ -6,7 +8,14 @@
     <link rel="pgpkey" href="https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x33d4ee6bd8c14ac619d8225485a2b54e0c97500d">
 
     <meta property="og:type" content="article" />
-    <meta name="twitter:card" content="summary">
+
+    {{ if .IsHome }}
+        <meta property="og:type" content="website" />
+    {{ else }}
+        <meta property="og:type" content="article" />
+    {{ end }}
+
+    <meta name="twitter:card" content="summary_large_image">
 
     <meta property="og:title" content="{{ if .Params.title }}{{ .Params.title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}" />
 
@@ -16,9 +25,13 @@
     <meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
     <meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
 
+    <meta name="keywords" content="{{ range $i, $e := .Params.category }}{{ if $i }}, {{ end }}{{ $e }}{{ end }},{{ range $i, $e := .Params.tag }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}">
+
     <meta name="twitter:title" content="{{ if .Params.title }}{{ .Params.title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta name="twitter:image" content="{{ .Site.Params.featuredImage }}">
     <meta property="og:image" content="{{ .Site.Params.featuredImage }}" />
 
     <meta name="twitter:site" content="@{{ .Site.Params.TwitterUsername }}">
     <meta name="twitter:creator" content="@{{ .Site.Params.TwitterUsername }}">
+
+

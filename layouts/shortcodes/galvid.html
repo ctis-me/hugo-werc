@@ -1,11 +1,19 @@
 {{ if .IsNamedParams }}
+  {{ $name := .Get "src" }}
   <div class="cdnvid-container gallery-video-container {{ if .Get "class" }}{{ .Get "class" }}{{ end }}">
-    <video controls class="gallery-video" {{ if .Get "alt" }}alt="{{ .Get "alt" }}"{{ end }} {{ if .Get "alt" }}title="{{ .Get "alt" }}"{{ end }} src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/gallery/{{ .Get "src" }}" /></video>
+    <video controls class="gallery-video" {{ if .Get "alt" }}alt="{{ .Get "alt" }}"{{ end }} {{ if .Get "alt" }}title="{{ .Get "alt" }}"{{ end }} {{ if .Get "thumbnail" }}poster="{{ .Get "thumbnail" }}"{{ else }}poster="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/gallery/{{ strings.TrimSuffix (path.Ext $name) $name }}-thumbnail.webp"{{ end }} />
+      <source src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/gallery/{{ strings.TrimSuffix (path.Ext $name) $name }}.webm"></source> 
+      <source src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/gallery/{{ .Get "src" }}"></source>
+    </video>
     <span class="gallery-description">{{ if .Get "alt" }}{{ .Get "alt" }}{{ end }}</span>
   </div>
 {{ else }}
+  {{ $name := .Get 0 }}
   <div class="cdnvid-container gallery-video-container">
-    <video controls class="gallery-video" {{ if len .Params | eq 2 }}alt="{{ .Get 1 }}"{{ end }} {{ if len .Params | eq 2 }}title="{{ .Get 1 }}"{{ end }} src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/gallery/{{ .Get 0 }}" /></video>
+    <video controls class="gallery-video" {{ if len .Params | eq 2 }}alt="{{ .Get 1 }}"{{ end }} {{ if len .Params | eq 2 }}title="{{ .Get 1 }}"{{ end }} poster="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/gallery/{{ strings.TrimSuffix (path.Ext $name) $name }}-thumbnail.webp"/>
+      <source src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/gallery/{{ strings.TrimSuffix (path.Ext $name) $name }}.webm"></source> 
+      <source src="https://cdn.ctis.me/file/ctisme-cdn/blog.ctis.me/video/gallery/{{ .Get "src" }}"></source>
+    </video>
     <span class="gallery-description">{{ if len .Params | eq 2 }}{{ .Get 1 }}{{ end }}</span>
   </div>
 {{ end }}

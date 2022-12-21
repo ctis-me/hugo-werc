@@ -17,9 +17,9 @@
         </head>
         <body class="rss-xsl">
 
-            <h1 class="rss-xsl-title">
+            <h2 class="rss-xsl-title">
                 <a href="{ link }"><xsl:value-of select="title" /></a>
-            </h1>
+            </h2>
 
             <p class="rss-xsl-description">
                 <xsl:value-of select="description" />. Last built <span class="rss-xsl-lastBuild"><xsl:value-of select="lastBuildDate" /></span>.

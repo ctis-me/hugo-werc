@@ -9,7 +9,7 @@
     <div id="post-head">
 
     <div id="post-titlebox">
-      <h1 id="post-title" class="p-name">Status Update - {{ .Param "date" | time.Format "January 2006"  }}</h1>
+      <h2 id="post-title" class="p-name">Status Update - {{ .Param "date" | time.Format "January 2006"  }}</h2>
       <span id="post-description" class="p-summary"><p>{{ .Param "description" | safeHTML }}</p></span>
       <span style="display:none" class="post-pubdate-date dt-published">{{ .Param "date" }}</span>
       <a style="display:none" class="u-url" rel="canonical" href="{{ .Permalink }}">Permalink</a>

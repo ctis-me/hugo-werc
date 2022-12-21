@@ -237,6 +237,7 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
     article h1, article h2, article h3, article h4, article h5, article h6 { text-align: left; }
     table, td, #post-head, article li { text-align: left }
     img, video { max-width: 100%; }
+    pre, code { font-size: .9rem; }
     .gallery-image-container, .cdnimg-container, .cdnvid-container {  max-width:  100%; }
     .gallery-micro {max-width: 50%;}
     .gallery-small {max-width: 70%;}

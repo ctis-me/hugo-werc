@@ -12,13 +12,13 @@ footer { display: flex; justify-content: space-between; }
 
 /* cut here to leave vanity behind */
 
-body { margin:0; padding: 0; font-size: 110%; font-family: Helvetica, Verdana, Arial, 'Liberation Sans', FreeSans, sans-serif; }
+body { margin:0; padding: 0; font-size: 100%; font-family: Helvetica, Verdana, Arial, 'Liberation Sans', FreeSans, sans-serif; }
 a { text-decoration: none; color: }
 a:hover { text-decoration: underline }
 
 /* header and top bar */
-header nav { background-color: rgb(100,135,220); color: white; padding: 0.3em; border-bottom: 2px solid black; font-size: 91%; }
-header h1 { background-color: #ff6d06; color: black; margin: 0; border-bottom: 2px solid black; font-weight: normal; padding: 0.25ex; font-size: 233%; }
+header nav { background-color: rgb(100,135,220); color: white; padding: 0.3em; border-bottom: .75px solid black; font-size: 91%; }
+header h1 { background-color: #ff6d06; color: black; margin: 0; border-bottom: .75px solid black; font-weight: normal; padding: 0.25ex; }
 
 /* sidebar */
 body > nav { border-right: 1px solid #ddd; padding: 0;  } 
@@ -69,7 +69,7 @@ header, footer {
 	font-style: normal;
 }
 
-.midHeader { background-color: #e7fbfd; border-color: #777;}
+.midHeader { background-color: #e7fbfd; border-color: black; font-size: 1.8em}
 
 .superHeader, .superHeader a, header nav {color: #777!important; background-color: white}
 
@@ -78,7 +78,7 @@ div.right > a {display:  inline-block;}
 
 side-bar { background-color: white;}
 
-.sidebarLink {border-left: #777 solid 0.2em; color: black;}
+.sidebarLink {border-left: #777 solid 0.15em; color: black;}
 
 .sidebarLink:hover {
   color: black!important;
@@ -87,6 +87,8 @@ side-bar { background-color: white;}
 }
 
 .thisPage, .thispage a {color:  black!important;border-left: black solid 0.2em!important; font-style: italic!important;}
+
+.superHeader, footer { font-size: 0.8em; }
 
 body > footer {left: 0; bottom: 0; width: 100%;}
 footer, footer a {color: black;background-color: #e7fbfd;}
@@ -144,6 +146,14 @@ pre::-webkit-scrollbar, code::-webkit-scrollbar { display: none; }
 #stats-table-archive h2:first-child, #recently-updated-table h3:first-child { margin-top:  25px; }
 .archive-header, .recently-updated-header {margin:  0; border: none;}
 .archive-header { margin-top: 50px; }
+
+body > nav, body > nav > div {
+  border: none;
+  border-bottom: none;
+  border-top: none; 
+  border-left: none;
+  border-right: none;
+}
 
 /* RSS XSL */
 

@@ -35,6 +35,18 @@ article h6, article h7, article h8 { color: rgb(0,102,204); font-weight: bold; m
 article a { color: rgb(0,102,204); }
 article a:hover { color:  rgb(100,135,220); }
 
+article, .nobreak {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
 /* footer */
 footer { color: white; background-color: rgb(100,135,220); }
 footer a { color: inherit; }
@@ -109,7 +121,7 @@ article h4 {color: black;border: none; padding-bottom: 0px;}
 
 img, video {border: 1.5px solid #777; max-width: 80%; height: auto;}
 blockquote {font-style: italic}
-pre, code { font-size:  95%; font-family: 'Go Mono', 'Courier New', Courier, monospace }
+pre, code { font-size:  95%; font-family: 'Go Mono', 'Courier New', Courier, monospace; -webkit-text-size-adjust: 100%; }
 
 #post-head { margin-bottom: 2em; }
 #post-metabox {display: flex; flex-direction:  column; border: 1px solid #777; padding: 5px; max-width: max-content;}
@@ -237,6 +249,12 @@ body > nav, body > nav > div {
 
 @-webkit-keyframes pdf-spin {
   to { -webkit-transform: rotate(360deg); }
+}
+
+@media screen and (max-device-width: 480px){
+  body{
+    -webkit-text-size-adjust: 100%;
+  }
 }
 
 @media only screen and (max-width: 600px) {

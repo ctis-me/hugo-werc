@@ -2,7 +2,9 @@
   <h3 class="recently-updated-header">Recent Updates</h3>
   <section id="recently-updated-table">
     <ul class="recently-updated-posts-index">
-    {{range (.Site.RegularPages.ByLastmod | last 4).Reverse }}
+      
+    {{- $pages := where site.RegularPages "Params.display_recently_updated" true }}
+    {{- range ($pages.ByLastmod | last 4).Reverse }}
       <li class="h-entry">
         <a class="p-name u-url" href="{{.Permalink}}">{{ title .Title | markdownify }}</a> (in <a class="recently-updated-section" href="{{ .Section }}">{{ title .Section | markdownify }}</a>)
         <span class="dt-published" style="display:none">{{ .Param "date" }}</span>
